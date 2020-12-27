@@ -8,115 +8,244 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 html {
     font-size: 62.5%;
 }
 
-.body-expanded {
-    margin-left: 300px;
-}
-
-.header__container {
+.capa{
     width: 100%;
-    height: 50px;
+    width: 100%;
+    height: 300px;
+    background-color:var(--black);
+}
+/*Estilos para el encabezado*/
+.header{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0; left: 0;
+    display: flex;
     background-color: var(--black);
+    justify-content: space-between;
+    align-items: center;
 }
 
-#sidemenu {
-    background-color: var(--black);
-    color: var(--white);
-    position: fixed;
-    height: 100%;
-    left: 0;
-    top: 0;
+.social-media {
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    /*margin: auto;*/
+}
+.container .btn-menu, .logo{
+    float: left;
+    line-height:100px;
+}
+.container .btn-menu label{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: 15px;
 }
 
-#sidemenu a {
-    color: white;
+.container .menu{
+    float: right;
+    line-height: 100px;
+}
+.container .menu a{
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
     text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
 }
-
-#sidemenu #header #menu-btn {
-    vertical-align: middle;
-    cursor: pointer;
-    padding: 10px;
-    width: 50px;
-    box-sizing: border-box;
+.container .menu a:hover{
+    border-bottom: 2px solid #c7c7c7;
+    padding-bottom: 5px;
 }
+/*Fin de Estilos para el encabezado*/
 
-#sidemenu #header #menu-btn:hover {
-    cursor: pointer;
-}
-
-#sidemenu #header #menu-btn .btn {
-    background-color: #fff;
-    width: 80%;
-    height: 2px;
-    margin: 5px 0;
-}
-
-#sidemenu #menu-items {
-    overflow: hidden;
-}
-
-#sidemenu #menu-items .item{
-    width: 300px;
-}
-
-#sidemenu #menu-items .item .title{
-    font-size: 1.4rem;
-    vertical-align: middle;
-    overflow: hidden;
-    display: inline-block;
-}
-
-#sidemenu #menu-items .item a {
-    display: block;
-    padding: 15px 0 15px 10px;
-}
-
-#sidemenu #menu-items .item a:hover {
-    background-color: var(--blackhover);
-}
-
-#sidemenu #menu-items .item .title {
-    padding: 0;
-}
-
-.menu-expanded {
-    width: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.menu-expanded #header #title{
-    display: inline-block;
-    width: calc(100% - 50px);
-    margin-right: -5px;
-    padding: 10px;
-}
-
-.menu-expanded #header #title span{
-    width: calc(300px - 50px - 5px);
-    overflow: hidden;
-}
-
-.menu-collapsed #header #title {
-    width: 0;
-    height: 0;
-    padding: 0;
-    margin: 0;
-}
-
-.menu-collapsed .item {
+/*Menù lateral*/
+#btn-menu{
     display: none;
 }
+.container-menu{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+.cont-menu nav{
+    transform: translateY(15%);
+}
 
-.menu-expanded .item {
+.cont-menu nav a {
+    font-size: 2rem;
+}
+.cont-menu nav a{
     display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.social-media {
+    display: flex;
+    justify-content:flex-end;
 }
 
 
+.twitter span, .linkedin span, .github span{
+    display: flex;
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
+.twitter, .github, .linkedin {
+    margin: 7px 2px 10px 10px;
+    display: block;
+}
 
+.twitter span {
+    background-image: url(./Icons/social_media/twitter_icon.png);
+}
+
+.linkedin span {
+    background-image: url(./Icons/social_media/linkedin_icon.png);
+}
+
+.github span {
+    background-image: url(./Icons/social_media/github_icon.png);
+    margin-right: 15px;
+}
+
+.presentation-container {
+    width: 100%;
+    height: 250px;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.presentation-container__name, .presentation-container__profession {
+    color: var(--white);
+    display: block;
+}
+
+.capa{
+    width: 100%;
+    height: 410px;
+}
+
+.presentation {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--white)
+}
+
+.presentation h2 {
+    padding-top: 75px;
+    font-size: 2.8rem;
+}
+
+.presentation h1 {
+    font-size: 1.6rem;
+}
+
+.profile-photo {
+    position: absolute;
+    width: 200px;
+    top: 330px;
+}
+
+.about-me {
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me h3 {
+    margin-top: 90px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+p {
+    margin-top: 30px;
+    font-size:1.5rem;
+    text-align: left;
+    padding: 0 30px;
+    font-weight:600 ;
+}
+
+.about-me__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    margin: 0 15px;
+    border-bottom: 2px solid gray;
+}
+
+.about-me__container-img {
+    padding-top: 30px;
+    max-width: 300px;
+    min-width: 200px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.skills-table table {
+    border: 2px solid var(--black);
+}

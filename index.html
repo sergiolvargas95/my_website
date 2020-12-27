@@ -9,44 +9,62 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <header class="header__container">
-            <div class="menu-collapsed" id="sidemenu">
-                <div id="header">
-                    <div id="menu-btn">
-                    <div class="btn"></div>
-                    <div class="btn"></div>
-                    <div class="btn"></div>
-                    </div>
-                </div>
-                <div id="menu-items">
-                    <div class="item">
-                        <a href="#">
-                            <div class="title"><span>Home</span></div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <div class="title"><span>Portfolio</span></div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <div class="title"><span>Education</span></div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <div class="title"><span>Blog</span></div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <div class="title"><span>Contact me</span></div>
-                        </a>
-                    </div>
+        <header class="header">
+            <div class="container">
+                <div class="btn-menu">
+                    <label for="btn-menu">☰</label>
                 </div>
             </div>
+            <div class="social-media">
+                <a href="https://twitter.com/SergioLuisVarg6" class="twitter" target="_blank"><span></span></a>
+                <a href="https://www.linkedin.com/in/sergiovargas95/" class="linkedin" target="_blank"><span></span></a>
+                <a href="https://github.com/sergiolvargas95" class="github" target="_blank"><span></span></a>
+            </div>
         </header>
-        <script src="app.js"></script>
+        <main class="capa">
+                <div class="presentation">
+                    <h2>Sergio Vargas</h2>
+                    <h1>Fronted Developer</h1>
+                    <img class="profile-photo" src="images/profile_photo.png" alt="profile_photo" />
+                </div>
+        </main>
+        <section class="about-me">
+            <h3>Welcome</h3>
+            <p>Hello, my name's Sergio Vargas and I live in Cartagena, Colombia. I am an Electronic engineer passionate about technology. I work as a programming and robotics teacher, this is an amazing experience because I can help a lot people to start in this world.</p>
+
+            <p>I am very interested in web technologies and how they can change our world, I started the path to become a frontend developer; I master the stander technologies used for web.</p>
+            <div class="about-me__container">
+                <img class="about-me__container-img"src="Icons/character 6.svg" alt="working" />
+            </div>
+        </section>
+        <section class="skills-table"></section>
+            <table>
+                <tr>
+                    <th>Fronted Developer</th>
+                </tr>
+                <tr>
+                    <th>HTML/CSS/SaSS</th>
+                </tr>
+                <tr>
+                    <th>Javascript (React)</th>
+                </tr>
+                <tr>
+                    <th>API Development</th>
+                </tr>
+            </table>
+        </section>
+        <!--	--------------->
+        <input type="checkbox" id="btn-menu">
+        <div class="container-menu">
+            <div class="cont-menu">
+                <nav>
+                    <a href="#">Home</a>
+                    <a href="#">Portfolio</a>
+                    <a href="#">Education</a>
+                    <a href="#">Contact me</a>
+                </nav>
+                <label for="btn-menu">✖️</label>
+            </div>
+        </div>
     </body>
 </html>
