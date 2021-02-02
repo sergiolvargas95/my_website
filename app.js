@@ -5,3 +5,4 @@ btn.addEventListener('click', e =>{
     menu.classList.toggle("menu-collased")
     document.querySelector('body').classList.toggle('body-expanded')
 })
+
