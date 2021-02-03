@@ -16,6 +16,10 @@ html {
     font-size: 62.5%;
 }
 
+:root {
+    scroll-behavior: auto;
+}
+
 .capa{
     width: 100%;
     width: 100%;
@@ -33,6 +37,11 @@ html {
     justify-content: space-between;
     align-items: center;
     z-index: 2;
+    min-width: 200px;
+}
+
+main {
+    width: 100%;
 }
 
 .social-media {
@@ -44,35 +53,53 @@ html {
     max-width: 1200px;
 }
 
-.container .btn-menu label{
-    color: #fff;
-    font-size: 25px;
-    cursor: pointer;
-    margin-left: 15px;
-}
-
-.container .menu{
-    float: right;
-    line-height: 100px;
-}
-.container .menu a{
-    display: inline-block;
-    padding: 15px;
-    line-height: normal;
-    text-decoration: none;
-    color: #fff;
-    transition: all 0.3s ease;
-    border-bottom: 2px solid transparent;
-    font-size: 15px;
-    margin-right: 5px;
-}
-.container .menu a:hover{
-    border-bottom: 2px solid #c7c7c7;
-    padding-bottom: 5px;
-}
 /*Fin de Estilos para el encabezado*/
 
 /*Menù lateral*/
+.hamburger{
+    position:fixed;
+    top:30px;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.menu-navegacion {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background-color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 40px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    transition: transform .3s ease-in-out;
+    transform: translate(-110%);
+}
+
+.menu-navegacion a {
+    padding-left: 20px;
+    margin: 20px 0 20px 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    height: 50px ;
+}
+
+.spread {
+    transform: translate(0)
+}
+
+.menu-navegacion a:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+/*
 #btn-menu{
     display: none;
 }
@@ -118,10 +145,7 @@ html {
     border-left: 5px solid transparent;
     transition: all 400ms ease;
 }
-.cont-menu nav a:hover{
-    border-left: 5px solid #c7c7c7;
-    background: #1f1f1f;
-}
+
 .cont-menu label{
     position: absolute;
     right: 5px;
@@ -130,7 +154,7 @@ html {
     cursor: pointer;
     font-size: 18px;
 }
-
+*/
 .social-media {
     display: flex;
     justify-content:flex-end;
@@ -190,7 +214,8 @@ html {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: var(--white)
+    color: var(--white);
+    width: 100%;
 }
 
 .presentation h2 {
@@ -219,7 +244,7 @@ html {
 .about-me h3 {
     margin: 90px 0 40px 0;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 900;
     height: auto;
 }
@@ -234,26 +259,41 @@ html {
     height: auto;
 }
 
-
-
 .about-me__container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items:center;
-    width: 50%;
+    width: 40%;
     min-width: 200px;
     height: 100%;
+    padding-left:30px;
+    margin-bottom: 90px;
 }
 
-.about-me__container p {
-    margin: 40px 20px;
+.name, .description {
     height: auto;
-    min-width: 300px;
-    font-size: 1.2rem;
+    min-width: 250px;
+    text-align: left;
+    font-weight:500;
 }
+
+.name {
+    font-size: 5.5rem;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.description {
+    font-size: 2rem;
+    text-align: justify;
+    padding-right: 20px;
+    max-width: 400px;
+}
+
 
 .about-me__container-img-principal {
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -271,10 +311,11 @@ html {
 
 .skills-table {
     width: 80%;
-    height: 900px;
+    height: auto;
     margin: 0 auto;
-    padding: 20px 0;
-    margin-bottom: 50px;
+    padding: 30px 0;
+    margin-top: 20px;
+    margin-bottom: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -376,6 +417,7 @@ html {
 
 .information p {
     font-size: 1.1rem;
+    font-weight: 700;
 }
 
 .tecnologies {

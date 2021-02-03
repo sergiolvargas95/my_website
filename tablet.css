@@ -1,0 +1,55 @@
+.about-me__container  {
+    justify-content: right;
+}
+
+.information p {
+    font-size: 1.6rem;
+}
+
+.tecnologies {
+    width: 250px;
+    height: 120px;
+}
+
+.project-picture {
+    width: 300px;
+    height: 300px;
+}
+
+.code-icon, .redirection-icon {
+    height: 50px;
+    width: 50px;
+}
+
+.presentation h2 {
+    font-size: 4rem;
+}
+
+.presentation h1 {
+    font-size: 2.5rem;
+}
+
+.presentation {
+    padding-top: 80px;
+}
+.profile-photo {
+    width: 290px;
+    top: 280px;
+}
+
+.about-me__container-img-principal {
+    justify-content: center;
+}
+
+.name {
+    font-size: 5rem;
+}
+
+.menu-navegacion {
+    width: 30%;
+
+}
+
+.menu-navegacion a {
+    font-size: 2rem;
+}
